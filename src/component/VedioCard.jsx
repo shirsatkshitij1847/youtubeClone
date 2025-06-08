@@ -15,7 +15,7 @@ const VedioCard = (props) => {
       <ul className="">
         <li className="font-bold">{title}</li>
         <li>{channelTitle}</li>
-        <li>{statistics.viewCount}</li>
+        <li>{statistics.viewCount} Views</li>
       </ul>
     </div>
   );

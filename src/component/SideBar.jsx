@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
+import { Link } from "react-router-dom";
 const SideBar = () => {
   const isMenuOpen = useSelector((state) => state.app.isMenuOpen);
   console.log(isMenuOpen, "this iss state of slideout pannel");
@@ -8,9 +8,11 @@ const SideBar = () => {
   if (!isMenuOpen) return null;
 
   return (
-    <div className="p-2 shadow-lg col-span-1 w-60">
+    <div className="p-2 shadow-lg col-span-2 w-60">
       <ul className="pl-3">
-        <li>🏠 Home</li>
+        <Link to={`/`}>
+          <li>🏠 Home</li>
+        </Link>
         <li>🎬 Shorts</li>
         <li>📹 Videos</li>
         <li>🔴 Live</li>
